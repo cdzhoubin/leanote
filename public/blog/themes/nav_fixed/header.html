@@ -24,7 +24,7 @@
 {{else if $.curIsSingle}}
 	{{$.single.Title}}
 {{else if $.curIsArchive}}
-	Archives
+	归档
 {{end}}
     
 </title>
@@ -103,10 +103,10 @@ function log(o) {
 			
 			<!-- 归档 -->
 			<li class="{{if $.curIsArchive}}active{{end}}">
-				<a href="{{$.archiveUrl}}">Archives</a>
+				<a href="{{$.archiveUrl}}">归档</a>
 			</li>
 			<li class="{{if $.curIsTags}}active{{end}}">
-				<a href="{{$.tagsUrl}}">Tags</a>
+				<a href="{{$.tagsUrl}}">标签</a>
 			</li>
 			
 	      </ul>

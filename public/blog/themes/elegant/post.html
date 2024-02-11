@@ -63,10 +63,8 @@
                 <p>
                 Next: {{if $.nextPost}}<a href="{{$.postUrl}}/{{$.nextPost.UrlTitle}}">{{$.nextPost.Title}}</a>{{else}}No Post{{end}}
 			    </p>
-			</div>
+			</div>		
 			
-			<!-- share & comment -->
-			{{template "share_comment.html" $}}
 		</div>
 	</div>
 </div>
@@ -77,7 +75,7 @@
 <div id="blogNav">
 	<div id="blogNavNav">
 		<i class="fa fa-align-justify" title="Table of content"></i>
-		<span>Table of content</span>
+		<span>目录</span>
 	</div>
 	<div id="blogNavContent">
 	</div>
@@ -115,7 +113,7 @@ md2Html(content, $("#content"), function(html) {
     $("pre").addClass("prettyprint linenums");
     prettyPrint();
     initNav();
-    weixin();
+    //weixin();
 });
 </script>
 <!-- 不是markdown -->
@@ -123,7 +121,7 @@ md2Html(content, $("#content"), function(html) {
 <script>
 $(function() {
 	initNav();
-	weixin();
+	//weixin();
 });
 </script>
 {{end}}

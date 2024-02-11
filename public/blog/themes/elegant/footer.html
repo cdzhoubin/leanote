@@ -1,10 +1,10 @@
 <div id="footerContainer">
 	{{$userId := $.blogInfo.UserId}}
 	<div class="container" id="footer">
-        <div class="col-md-4">
-          <h3>Navigation</h3>
+        <div class="col-md-6">
+          <h3>导航</h3>
           <ul>
-          	<li><a href="{{$.indexUrl}}">Home</a></li>
+          	<li><a href="{{$.indexUrl}}">主页</a></li>
           	{{range $.cates}}
 			<li>
 				<a href="{{$.cateUrl}}/{{.UrlTitle}}">{{.Title}}</a>
@@ -19,15 +19,15 @@
 			
 			<!-- 归档 -->
 			<li class="{{if $.curIsArchive}}active{{end}}">
-				<a href="{{$.archiveUrl}}">Archives</a>
+				<a href="{{$.archiveUrl}}">归档</a>
 			</li>
 			<li class="{{if $.curIsTags}}active{{end}}">
-				<a href="{{$.tagsUrl}}">Tags</a>
+				<a href="{{$.tagsUrl}}">标签</a>
 			</li>
           </ul>
         </div>
-        <div class="col-md-4">
-          <h3>Recent Posts</h3>
+        <div class="col-md-6">
+          <h3>最新发布</h3>
           <ul>
           	{{range .recentPosts}}
           	<li title="{{.Title}}"><a href="{{$.postUrl}}/{{.UrlTitle}}">
@@ -40,18 +40,18 @@
           	{{end}}
           </ul>
        </div>
-        <div class="col-md-4">
-          <h3>Friend Links</h3>
-          <ul>
-          	{{if $.themeInfo.FriendLinks}}
-          		{{range $.themeInfo.FriendLinks}}
-					<li><a href="{{.Url}}" target="_blank">{{.Title}}</a></li>
-          		{{end}}
-          	{{end}}
-		 </ul>
-        </div>
+<!--        <div class="col-md-4">-->
+<!--          <h3>友情链接</h3>-->
+<!--          <ul>-->
+<!--          	{{if $.themeInfo.FriendLinks}}-->
+<!--          		{{range $.themeInfo.FriendLinks}}-->
+<!--					<li><a href="{{.Url}}" target="_blank">{{.Title}}</a></li>-->
+<!--          		{{end}}-->
+<!--          	{{end}}-->
+<!--		 </ul>-->
+<!--        </div>-->
     </div>
-    <div class="footer-leanote">Proudly powered by <a href="https://leanote.com">Leanote</a></div>
+    <div class="footer-leanote">Proudly powered by <a href="https://usteinfo.github.io/">usteinfo</a></div>
 </div>
 <script src="{{$.jQueryUrl}}"></script>
 <script src="{{$.bootstrapJsUrl}}"></script>

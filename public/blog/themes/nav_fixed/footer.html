@@ -2,9 +2,9 @@
 	{{$userId := $.blogInfo.UserId}}
 	<div class="container" id="footer">
         <div class="col-md-4">
-          <h3>Navigation</h3>
+          <h3>导航</h3>
           <ul>
-          	<li><a href="{{$.indexUrl}}">Home</a></li>
+          	<li><a href="{{$.indexUrl}}">主页</a></li>
           	{{range $.cates}}
 			<li>
 				<a href="{{$.cateUrl}}/{{.UrlTitle}}">{{.Title}}</a>
@@ -19,15 +19,15 @@
 			
 			<!-- 归档 -->
 			<li class="{{if $.curIsArchive}}active{{end}}">
-				<a href="{{$.archiveUrl}}">Archives</a>
+				<a href="{{$.archiveUrl}}">归档</a>
 			</li>
 			<li class="{{if $.curIsTags}}active{{end}}">
-				<a href="{{$.tagsUrl}}">Tags</a>
+				<a href="{{$.tagsUrl}}">标签</a>
 			</li>
           </ul>
         </div>
         <div class="col-md-4">
-          <h3>Recent Posts</h3>
+          <h3>更新发布</h3>
           <ul>
           	{{range .recentPosts}}
           	<li title="{{.Title}}"><a href="{{$.postUrl}}/{{.UrlTitle}}">
@@ -41,7 +41,7 @@
           </ul>
        </div>
         <div class="col-md-4">
-          <h3>Friend Links</h3>
+          <h3>友情链接</h3>
           <ul>
           	{{if $.themeInfo.FriendLinks}}
           		{{range $.themeInfo.FriendLinks}}
